@@ -1,11 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mi página</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, main, footer {
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+
+        header {
+            background-color: #FFC4BA;
+        }
+
+        main {
+            background-color: #bbdefb;
+        }
+
+        footer {
+            background-color: #c8e6c9;
+        }
+
+        img, video, audio {
+            display: block;
+            margin-top: 15px;
+            max-width: 60%;
+        }
+    </style>
+
 </head>
+
 <body>
-    
+    <!--Ejercicio 1: Estructura de la página-->
+    <header>
+        <h1>Juan Diego Vega Caqui</h1>
+        <p>Una frase que me representa.</p>
+    </header>
+
+    <main>
+        <p>Soy Juan Diego, tengo 19 años y vivo en Puente Piedra.</p>
+        <p>Estoy aprendiendo HTML para tener la capacidad de hacer páginas web</p>
+
+        <!--Ejercicio 2: Galería personal-->
+        <img width="300" src="https://i.pinimg.com/236x/12/3a/89/123a89b5b676d22be1c392bd7a4ee36d.jpg" alt="Actividad que me gusta">
+        <img width="300" src="https://pbs.twimg.com/profile_images/1602554587499601920/wUov6Tgl_400x400.jpg" alt="Lugar que me gustaría visitar">
+        <img width="300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ5y2Gt_huwTAIkHckkgB15Ju-lf7aCFTMFf8wIFdIgvKmq9L-QZEtfgPj&s=10" alt="Comida favorita">
+
+        <br><br><br>
+        <!--Ejercicio 3: Mi presentación en video-->
+        <h2>Mi presentacion en video</h2>
+        <video src="homerochino.mp4" type="video/mp4" width="500" controls></video>
+
+        <br><br><br>
+        <!--Ejercicio 4: Audio que me representa-->
+        <p>Esta canción me inspira cuando estudio</p>
+        <audio controls src="skibididopdopdopd yes yes.mp3" type="audio/mp3"></audio>
+    </main>
+
+    <footer>
+        <p><b>U24233326</b></p>
+        <p>juan diego vega caqui🗿</p>
+    </footer>
+
 </body>
+
 </html>
