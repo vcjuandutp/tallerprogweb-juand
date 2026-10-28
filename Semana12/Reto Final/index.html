@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <link rel='stylesheet' href='estilos.css'>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CampusMarket UTP</h1>
+            <p>Sistema de control de inventario y caja</p>
+        </header>
+
+        <section class="catalog-section">
+            <h2>Catálogo Disponible</h2>
+            <table id="product-table">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mouse</td>
+                        <td>S/ 45.00</td>
+                        <td id="stock-0">5</td>
+                    </tr>
+                    <tr>
+                        <td>USB</td>
+                        <td>S/. 35</td>
+                        <td id="stock-1">8</td>
+                    </tr>
+                    <tr>
+                        <td>Teclado</td>
+                        <td>S/. 70</td>
+                        <td id="stock-2">3</td>
+                    </tr>
+                    <tr>
+                        <td>Audífonos</td>
+                        <td>S/. 60</td>
+                        <td id="stock-3">4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div class="action-box">
+            <button onclick="iniciarCampusMarket()">Iniciar sistema</button>
+        </div>
+    </div>
+</body>
+</html>
