@@ -16,7 +16,7 @@ function iniciarEncuesta() {
 
           let nota = Number(entrada);
 
-          // Validación de dato no vacío, número válido y rango 0-20
+          // validacion de dato no vacío, número válido y rango 0-20
           if (entrada.trim() !== "" && Number.isFinite(nota) && nota >= 0 && nota <= 20) {
             notas.push(nota);
             notaValida = true;
@@ -26,7 +26,7 @@ function iniciarEncuesta() {
         }
       }
 
-      // Paso 3: Cálculo de promedio y cantidad de aprobados (>= 12)
+      // calculo del promeido y cantida de aprobados
       let suma = 0;
       let aprobados = 0;
 
