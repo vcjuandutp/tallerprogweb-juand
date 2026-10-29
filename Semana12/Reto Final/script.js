@@ -58,7 +58,6 @@ function iniciarCampusMarket() {
             }
 
             // Validar stock disponible
-            // Nota: validamos contra el stock actual menos lo que ya tenga en el carrito de esta sesión
             let stockDisponibleReal = stock[index] - carritoCantidades[index];
             if (cantidad > stockDisponibleReal) {
                 alert("Stock insuficiente. Solo hay " + stockDisponibleReal + " unidades disponibles de " + productos[index] + ".");
