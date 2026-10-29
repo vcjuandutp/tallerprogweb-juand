@@ -29,7 +29,7 @@ table th, table td {
     text-align: center;
 }
 
-.action-box button {
+button {
     color: black;
     border: none;
     padding: 12px 24px;
