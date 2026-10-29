@@ -1,4 +1,4 @@
-// Arreglos paralelos según las especificaciones del reto
+// arreglos
 let productos = ["Mouse", "USB", "Teclado", "Audífonos"];
 let precios = [45, 35, 70, 60];
 let stock = [5, 8, 3, 4];
@@ -14,7 +14,7 @@ function actualizarTablaHTML() {
 }
 
 function iniciarCampusMarket() {
-    // Reiniciar carrito para cada nueva ejecución de caja
+    // reiniciar carrito para cada nueva ejecución de caja
     carritoCantidades = [0, 0, 0, 0];
     let continuarMenu = true;
 
@@ -79,7 +79,7 @@ function iniciarCampusMarket() {
         }
     }
 
-    // Calcular subtotal general
+    // calculo del subtotal general
     let subtotal = 0;
     let resumenProductos = "";
     let tieneArticulos = false;
@@ -87,12 +87,11 @@ function iniciarCampusMarket() {
     for (let i = 0; i < productos.length; i++) {
         if (carritoCantidades[i] > 0) {
             tieneArticulos = true;
-            let subTotalItem = carritoCantidades[i] * precios[i]; // Corregido abajo
-            // (Nota de sintaxis: subTotalItem = carritoCantidades[i] * precios[i])
+            let subTotalItem = carritoCantidades[i] * precios[i];
         }
     }
 
-    // Recálculo limpio del subtotal
+    // recalculo del subtotal
     subtotal = 0;
     for (let i = 0; i < productos.length; i++) {
         if (carritoCantidades[i] > 0) {
@@ -121,8 +120,8 @@ function iniciarCampusMarket() {
 
     let subtotalConDescuento = subtotal - descuentoMonto;
 
-    // Bolsa opcional (+S/ 2)
-    let quiereBolsa = confirm("¿Desea solicitar bolsa ecológica por un costo adicional de S/ 2.00?");
+    // bolsa
+    let quiereBolsa = confirm("¿Desea solicitar bolsa por un costo adicional de S/ 2.00?");
     let costoBolsa = 0;
     if (quiereBolsa) {
         costoBolsa = 2.00;
@@ -130,13 +129,13 @@ function iniciarCampusMarket() {
 
     let totalFinal = subtotalConDescuento + costoBolsa;
 
-    // Descontar oficialmente del stock general solo al finalizar la compra con éxito
+    // descontar el stock solo cuando se complete la compra
     for (let i = 0; i < stock.length; i++) {
         stock[i] -= carritoCantidades[i];
     }
     actualizarTablaHTML();
 
-    // Mostrar comprobante final por alert
+    // comprobante
     let comprobante = "=== COMPROBANTE DE PAGO CAMPUSMARKET ===\n\n" +
                       "Productos adquiridos:\n" + resumenProductos + "\n" +
                       "Subtotal: S/ " + subtotal.toFixed(2) + "\n" +
